@@ -1,23 +1,23 @@
-Diabetes Detection — Streamlit Web App
+# Diabetes Detection - Streamlit Web App
 
 An interactive web app that predicts diabetes risk from patient health
 data, built with Logistic Regression and Random Forest, and deployed
 as a live Streamlit dashboard.
 
-Live demo: Add your Streamlit Community Cloud link here after deploying
+**Live demo:** _add your Streamlit Community Cloud link here after deploying_
 
-Overview
+## Overview
 This project trains and compares two classifiers on a 10,000-row
 patient health dataset, then wraps the best-performing model in a
 Streamlit app with three views:
-- Predict — enter patient details and get a live diabetes risk
+- **Predict** — enter patient details and get a live diabetes risk
   prediction with probability.
-- Dataset Overview — class balance, glucose distribution, BMI vs
+- **Dataset Overview** — class balance, glucose distribution, BMI vs
   age, and a raw data sample.
-- Model Performance — side-by-side Accuracy / Precision / Recall /
+- **Model Performance** — side-by-side Accuracy / Precision / Recall /
   F1-Score comparison between the two models.
 
-Dataset
+## Dataset
 `data/diabetes.csv` — 10,000 patient records with columns:
 
 | Column | Description |
@@ -33,15 +33,15 @@ Dataset
 | Smoking | Yes / No |
 | Family_History | Family history of diabetes — Yes / No |
 | High_Blood_Pressure | Yes / No |
-| Diabetes | Target — Yes / No |
+| Diabetes | **Target** — Yes / No |
 
-Tech Stack
+## Tech Stack
 - Python, Pandas, NumPy
 - Scikit-learn (Logistic Regression, Random Forest)
 - Streamlit (web app)
 - Plotly (interactive charts)
 
-Setup & Run Locally
+## Setup & Run Locally
 ```bash
 # 1. Clone the repo
 git clone https://github.com/<your-username>/diabetes-detection.git
@@ -58,32 +58,32 @@ streamlit run app.py
 ```
 The app opens at `http://localhost:8501`.
 
-Approach
-1. Data Cleaning — dropped the ID column, confirmed no missing
+## Approach
+1. **Data Cleaning** — dropped the ID column, confirmed no missing
    values across all 10,000 rows.
-2. Encoding — label-encoded categorical fields (Gender, Physical
+2. **Encoding** — label-encoded categorical fields (Gender, Physical
    Activity, Smoking, Family History, High Blood Pressure) and the
    target.
-3. Modeling — trained Logistic Regression (on scaled features) and
+3. **Modeling** — trained Logistic Regression (on scaled features) and
    Random Forest (on raw features), both with `class_weight="balanced"`
    to handle the ~14% positive class imbalance.
-4. Evaluation — compared Accuracy, Precision, Recall, and
+4. **Evaluation** — compared Accuracy, Precision, Recall, and
    F1-Score; the model with the best F1-Score is saved and served by
    the app.
-5. Deployment — Streamlit app loads the saved model/scaler and
+5. **Deployment** — Streamlit app loads the saved model/scaler and
    serves live predictions plus EDA and performance dashboards.
 
-Results
+## Results
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |---|---|---|---|---|
 | Logistic Regression | 0.785 | 0.368 | 0.799 | 0.504 |
-| Random Forest (deployed) | 0.845 | 0.456 | 0.725 | 0.560 |
+| **Random Forest (deployed)** | **0.845** | **0.456** | **0.725** | **0.560** |
 
 Random Forest was selected as the deployed model based on the highest
 F1-Score.
 
-Project Structure
+## Project Structure
 ```
 diabetes-detection/
 ├── app.py                  # Streamlit web app
@@ -98,10 +98,10 @@ diabetes-detection/
 └── README.md
 ```
 
-Disclaimer
+## Disclaimer
 This is a portfolio/demo project. Predictions are for illustrative
-purposes only and are not a substitute for professional medical
+purposes only and are **not** a substitute for professional medical
 advice or diagnosis.
 
-License
+## License
 MIT
