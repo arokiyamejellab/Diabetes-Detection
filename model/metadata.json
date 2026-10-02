@@ -1,0 +1,71 @@
+{
+  "best_model": "Random Forest",
+  "feature_cols": [
+    "Age",
+    "BMI",
+    "Blood_Pressure",
+    "Glucose_Level",
+    "Insulin_Level",
+    "Gender",
+    "Physical_Activity",
+    "Smoking",
+    "Family_History",
+    "High_Blood_Pressure"
+  ],
+  "categorical_cols": [
+    "Gender",
+    "Physical_Activity",
+    "Smoking",
+    "Family_History",
+    "High_Blood_Pressure"
+  ],
+  "numeric_cols": [
+    "Age",
+    "BMI",
+    "Blood_Pressure",
+    "Glucose_Level",
+    "Insulin_Level"
+  ],
+  "encoders": {
+    "Gender": [
+      "Female",
+      "Male"
+    ],
+    "Physical_Activity": [
+      "High",
+      "Low",
+      "Medium"
+    ],
+    "Smoking": [
+      "No",
+      "Yes"
+    ],
+    "Family_History": [
+      "No",
+      "Yes"
+    ],
+    "High_Blood_Pressure": [
+      "No",
+      "Yes"
+    ],
+    "Diabetes": [
+      "No",
+      "Yes"
+    ]
+  },
+  "uses_scaled_input": false,
+  "results": {
+    "Logistic Regression": {
+      "accuracy": 0.785,
+      "precision": 0.3676,
+      "recall": 0.7985,
+      "f1": 0.5035
+    },
+    "Random Forest": {
+      "accuracy": 0.8445,
+      "precision": 0.4562,
+      "recall": 0.7253,
+      "f1": 0.5601
+    }
+  }
+}
